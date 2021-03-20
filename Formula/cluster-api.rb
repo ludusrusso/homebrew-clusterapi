@@ -15,6 +15,7 @@ class ClusterApi < Formula
   end
 
   test do
-    system "true"
+    assert_match "Usage of clusterctl:",
+        shell_output("#{bin}/clusterctl --help")
   end
 end
